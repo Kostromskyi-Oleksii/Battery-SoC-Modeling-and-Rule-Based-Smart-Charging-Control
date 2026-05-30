@@ -8,4 +8,4 @@ results = analyze(soc, soh)
 for k, v in results.items():
     print(f"{k}: {v}")
 
-plot_results(soc, soh)
+plot_results(soc, soh, hours_per_day=24, days=60)
