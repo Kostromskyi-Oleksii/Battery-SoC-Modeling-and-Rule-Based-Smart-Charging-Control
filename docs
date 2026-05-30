@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3.1 Safari/605.1.15" version="29.6.4">
+  <diagram name="Страница-1" id="TxOvEl5zshVMvOUHlmdp">
+    <mxGraphModel dx="1003" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-CInDwxXHQeKzYrrOagT-1" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Grid / Utility Grid&#xa;(Low-price tariff 00:00-06:00)" vertex="1">
+          <mxGeometry height="78" width="260" x="241" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-2" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Charger&#xa;η = 95%&#xa;MAX_CHARGE_POWER = 1000 W" vertex="1">
+          <mxGeometry height="102" width="262" x="241" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-3" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Battery&#xa;• Capacity 4 kWh&#xa;• SoC 20-90%&#xa;• SoH (degradation)" vertex="1">
+          <mxGeometry height="102" width="260" x="130" y="338" as="geometry" />
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-4" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Controller&#xa;(rule-based)&#xa;• Night - charge&#xa;• Evening - discharge" vertex="1">
+          <mxGeometry height="126" width="260" x="337" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-5" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Inverter / Discharge&#xa;η = 95%&#xa;MAX_DISCHARGE_POWER = 1200 W" vertex="1">
+          <mxGeometry height="102" width="283" x="230" y="738" as="geometry" />
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-6" parent="1" style="whiteSpace=wrap;strokeWidth=2;" value="Household Load&#xa;• Base 300 W&#xa;• Peak 600 W (18:00-22:00)" vertex="1">
+          <mxGeometry height="102" width="260" x="241" y="914" as="geometry" />
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-7" edge="1" parent="1" source="-CInDwxXHQeKzYrrOagT-1" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="-CInDwxXHQeKzYrrOagT-2" value="energy at night">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-8" edge="1" parent="1" source="-CInDwxXHQeKzYrrOagT-2" style="curved=1;startArrow=none;endArrow=block;exitX=0.25;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="-CInDwxXHQeKzYrrOagT-3" value="charge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="301" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-9" edge="1" parent="1" source="-CInDwxXHQeKzYrrOagT-3" style="curved=1;startArrow=none;endArrow=block;exitX=0.38;exitY=1;entryX=0.15;entryY=0;rounded=0;" target="-CInDwxXHQeKzYrrOagT-5" value="discharge">
+          <mxGeometry relative="1" x="0.0157" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="200" y="489" />
+              <mxPoint x="200" y="701" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-10" edge="1" parent="1" source="-CInDwxXHQeKzYrrOagT-5" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="-CInDwxXHQeKzYrrOagT-6" value="power supply to load">
+          <mxGeometry relative="1" x="0.0811" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-11" edge="1" parent="1" source="-CInDwxXHQeKzYrrOagT-3" style="curved=1;startArrow=block;endArrow=block;exitX=0.69;exitY=1;entryX=0.26;entryY=0;rounded=0;" target="-CInDwxXHQeKzYrrOagT-4" value="SoC monitoring&#xa;control">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="355" y="489" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-12" edge="1" parent="1" source="-CInDwxXHQeKzYrrOagT-4" style="curved=1;startArrow=none;endArrow=block;exitX=0.63;exitY=0;entryX=0.84;entryY=1;rounded=0;" target="-CInDwxXHQeKzYrrOagT-2" value="charge command">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="527" y="489" />
+              <mxPoint x="527" y="301" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-CInDwxXHQeKzYrrOagT-13" edge="1" parent="1" source="-CInDwxXHQeKzYrrOagT-4" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.69;entryY=0;rounded=0;" target="-CInDwxXHQeKzYrrOagT-5" value="discharge command">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="467" y="701" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
